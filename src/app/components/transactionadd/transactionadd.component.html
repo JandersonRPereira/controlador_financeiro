@@ -1,0 +1,71 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      
+      <span>Controlador financeiro personalizado</span>
+      <span class="toolbar-spacer"></span>
+      <button mat-icon-button matIconButton [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>person</mat-icon>
+            <span>Perfil</span>
+        </button>
+       <button mat-menu-item (click)="logout()" >
+            <mat-icon>exit</mat-icon>
+            <span>Sair</span>
+        </button>
+        </mat-menu>
+    </mat-toolbar>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+      <mat-card>
+
+        <mat-card-content>          
+            <div class="mat-elevation-z0">
+                <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()" >
+
+                    <mat-form-field class="full-width type">
+                        <mat-label>Select Type Transaction</mat-label>
+                        <mat-select matNativeControl #type_transac formControlName="type" required>
+                            <mat-option value="1">Receita</mat-option>
+                            <mat-option value="2">Despesa</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="full-width desripton">
+                        <mat-label>description</mat-label>
+                        <input matInput formControlName="description" required>
+                        <mat-error *ngIf="form.controls['description'].hasError('required')">
+                            Description is **required**.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width amount">
+                        <mat-label>Amount</mat-label>
+                        <input
+                            matInput
+                            formControlName="amount"
+                            currencyMask
+                            [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+                            required>
+                        <mat-error *ngIf="form.controls['amount'].hasError('required')">
+                            Amount is **required**.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">
+                        Submit
+                    </button>
+                    <button mat-raised-button class="btn-cancel" color="warn" (click)="cancel()">
+                        Cancel
+                    </button>
+                </form>
+            </div>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

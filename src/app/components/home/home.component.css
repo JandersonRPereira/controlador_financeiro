@@ -1,0 +1,104 @@
+/* src/app/app.component.css */
+.sidenav-container {
+  height: 100vh; /* Make the container take full viewport height */
+}
+
+.sidenav {
+  width: 200px; /* Adjust sidebar width as needed */
+}
+
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto; /* Pushes content to the right */
+}
+
+.content {
+  padding: 20px;
+}
+
+mat-card {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+section {
+  display: flex;
+  align-items: center;
+}
+.button-row {
+  max-width: 600px;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+button .edit{
+  color: coral;
+}
+button .delete{
+  color: red;
+}
+.btn-addTransaction{
+  margin: 15px;
+}
+.dialog-danger mat-icon{
+  text-align: center;
+  color: red;
+}
+
+.cards-transactions{
+    display: flex;
+    align-items: center;
+}
+.card-indice {
+  max-width: 400px;
+  max-width: 200px;
+  margin: 0 20px 10px;
+}
+.card-receitas {
+  background-color: green;
+}
+.card-despesas {
+  background-color: red;
+}
+.card-total {
+  background-color: blue;
+}
+.card-indice mat-card-title{
+  color: aliceblue;
+  font-size: 20px;
+}
+.card-indice mat-card-subtitle{
+  color: aliceblue;
+  font-size: 17px;
+}
+.container mat-form-field + mat-form-field {
+  margin-left: 8px;
+}
+
+.right-align {
+  text-align: right;
+}
+
+input.right-align::-webkit-outer-spin-button,
+input.right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.right-align {
+  -moz-appearance: textfield;
+}
+.card-actions{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

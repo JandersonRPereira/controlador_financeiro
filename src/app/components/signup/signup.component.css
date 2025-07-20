@@ -1,0 +1,20 @@
+.my-form-card {
+  max-width: 400px; /* Limit the card width for better appearance */
+  margin: 50px auto; /* Center the card on the page */
+  padding: 20px;
+}
+
+.my-form {
+  display: flex;
+  flex-direction: column; /* Stack form fields vertically */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.full-width-field {
+  width: 100%; /* Make form fields take full width of the card */
+  margin-bottom: 15px; /* Add some space between fields */
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+}

@@ -1,0 +1,38 @@
+/* src/app/app.component.css */
+.sidenav-container {
+  height: 100vh; /* Make the container take full viewport height */
+}
+
+.sidenav {
+  width: 200px; /* Adjust sidebar width as needed */
+}
+
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto; /* Pushes content to the right */
+}
+
+.content {
+  padding: 20px;
+}
+
+mat-card {
+  margin-top: 20px;
+}
+.form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+.btn-cancel{
+    margin-left: 15px;
+}
